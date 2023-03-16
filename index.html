@@ -20,7 +20,6 @@
                 return "Scissors";
             }
         }
-        console.log(getComputerChoice());
         function playRound(playerSelection, computerSelection) {
             let uncapitalPlayerSelection = playerSelection.toLowerCase();
             let uncapitalComputerSelection = computerSelection.toLowerCase();
@@ -40,7 +39,16 @@
                 return `You win! ${uncapitalPlayerSelection} beats ${uncapitalComputerSelection}`;
             }
         }
-        console.log(playRound("rock", getComputerChoice()));
+        function game() {
+            let result = '';
+            for (let i = 0; i < 5; i++) {
+                const playerSelection = prompt("Rock/Paper/Scissors? :");
+                const computerSelection = getComputerChoice();
+                result += `${playRound(playerSelection, computerSelection)}\n`;
+            }
+            return result;
+        }
+            console.log(game());
     </script>
 </body>
 
