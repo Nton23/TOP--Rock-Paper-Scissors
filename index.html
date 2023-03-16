@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
 </head>
+
 <body>
     <script>
         function getComputerChoice() {
-            let result = Math.floor(Math.random()*3);
+            let result = Math.floor(Math.random() * 3);
             if (result === 0) {
                 return "Rock";
             } else if (result === 1) {
@@ -19,6 +21,27 @@
             }
         }
         console.log(getComputerChoice());
+        function playRound(playerSelection, computerSelection) {
+            let uncapitalPlayerSelection = playerSelection.toLowerCase();
+            let uncapitalComputerSelection = computerSelection.toLowerCase();
+            if (uncapitalComputerSelection === uncapitalPlayerSelection) {
+                return `It is a tie, you put ${uncapitalPlayerSelection} and computer puts ${uncapitalComputerSelection}`;
+            } else if (uncapitalComputerSelection === "rock" && uncapitalPlayerSelection === "scissors") {
+                return `You lose! ${uncapitalComputerSelection} beats ${uncapitalPlayerSelection}`;
+            } else if (uncapitalComputerSelection === "paper" && uncapitalPlayerSelection === "rock") {
+                return `You lose! ${uncapitalComputerSelection} beats ${uncapitalPlayerSelection}`;
+            } else if (uncapitalComputerSelection === "scissors" && uncapitalPlayerSelection === "paper") {
+                return `You lose! ${uncapitalComputerSelection} beats ${uncapitalPlayerSelection}`;
+            } else if (uncapitalComputerSelection === "rock" && uncapitalPlayerSelection === "paper") {
+                return `You win! ${uncapitalPlayerSelection} beats ${uncapitalComputerSelection}`;
+            } else if (uncapitalComputerSelection === "scissors" && uncapitalPlayerSelection === "rock") {
+                return `You win! ${uncapitalPlayerSelection} beats ${uncapitalComputerSelection}`;
+            } else if (uncapitalComputerSelection === "paper" && uncapitalPlayerSelection === "scissors") {
+                return `You win! ${uncapitalPlayerSelection} beats ${uncapitalComputerSelection}`;
+            }
+        }
+        console.log(playRound("rock", getComputerChoice()));
     </script>
 </body>
+
 </html>
