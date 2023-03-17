@@ -29,8 +29,15 @@ function playRound(playerSelection, computerSelection) {
 }
 function game() {
     let result = '';
-        const playerSelection = prompt("Rock/Paper/Scissors? :");
-        const computerSelection = getComputerChoice();
-        result += `${playRound(playerSelection, computerSelection)}\n`;
-    }
-    
+    const playerSelection = prompt("Rock/Paper/Scissors? :");
+    const computerSelection = getComputerChoice();
+    result += `${playRound(playerSelection, computerSelection)}\n`;
+}
+
+const rockButton = document.createElement('button');
+const scissorsButton = document.createElement('button');
+const paperButton = document.createElement('button');
+
+rockButton.innerText = "Rock";
+scissorsButton.innerText = "Scissors";
+paperButton.innerText = "Paper";
