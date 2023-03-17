@@ -48,3 +48,10 @@ paperButton.textContent = "Paper";
 document.body.appendChild(rockButton);
 document.body.appendChild(scissorsButton);
 document.body.appendChild(paperButton);
+
+//set class attribute to each button
+rockButton.setAttribute("class", "bttn");
+scissorsButton.setAttribute("class", "bttn");
+paperButton.setAttribute("class", "bttn");
+
+//set id attribute to each button
