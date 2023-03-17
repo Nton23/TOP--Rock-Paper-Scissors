@@ -34,10 +34,17 @@ function game() {
     result += `${playRound(playerSelection, computerSelection)}\n`;
 }
 
+//create button for rock, scissors, and paper
 const rockButton = document.createElement('button');
 const scissorsButton = document.createElement('button');
 const paperButton = document.createElement('button');
 
-rockButton.innerText = "Rock";
-scissorsButton.innerText = "Scissors";
-paperButton.innerText = "Paper";
+//set the text content of the button
+rockButton.textContent = "Rock";
+scissorsButton.textContent = "Scissors";
+paperButton.textContent = "Paper";
+
+//add the button to the html document
+document.body.appendChild(rockButton);
+document.body.appendChild(scissorsButton);
+document.body.appendChild(paperButton);
