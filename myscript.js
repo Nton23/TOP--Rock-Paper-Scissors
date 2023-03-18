@@ -45,9 +45,9 @@ scissorsButton.textContent = "Scissors";
 paperButton.textContent = "Paper";
 
 //add the button to the html document
-document.body.appendChild(rockButton);
-document.body.appendChild(scissorsButton);
-document.body.appendChild(paperButton);
+//document.body.appendChild(rockButton);
+//document.body.appendChild(scissorsButton);
+//document.body.appendChild(paperButton);
 
 //set class attribute to each button
 rockButton.setAttribute("class", "users-bttn");
@@ -70,10 +70,15 @@ paperButton.addEventListener("click", () => {
     console.log(playRound("Paper", getComputerChoice()));
 })
 
-//set user button to id user-button-container div
-const div-user-buttons-container = document.getElementById("user-buttons-container");
-const div-text-result-container = document.getElementById("text-result-container");
-const div-record-tracking-container = document.getElementById("record-tracking-container");
-const div-user-record-container = document.getElementById("user-record-container");
-const div-computer-record-container = document.getElementById("computer-record-container");
-const div-user-computer-value-container = document.getElementById("user-computer-value-container");
+//set div from html to var in js
+const userButtonsContainer = document.getElementById("user-buttons-container");
+const textResultContainer= document.getElementById("text-result-container");
+const recordTrackingContainer = document.getElementById("record-tracking-container");
+const userRecordContainer = document.getElementById("user-record-container");
+const computerRecordContainer = document.getElementById("computer-record-container");
+const userComputerValueContainer = document.getElementById("user-computer-value-container");
+
+//set div class from html to var in js
+const userContainer = document.getElementsByClassName("user-container");
+
+//add buttons to div container
