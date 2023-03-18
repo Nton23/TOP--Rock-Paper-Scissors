@@ -50,9 +50,9 @@ document.body.appendChild(scissorsButton);
 document.body.appendChild(paperButton);
 
 //set class attribute to each button
-rockButton.setAttribute("class", "bttn");
-scissorsButton.setAttribute("class", "bttn");
-paperButton.setAttribute("class", "bttn");
+rockButton.setAttribute("class", "users-bttn");
+scissorsButton.setAttribute("class", "users-bttn");
+paperButton.setAttribute("class", "users-bttn");
 
 //set id attribute to each button
 rockButton.setAttribute("id", "rockBttn");
@@ -71,3 +71,9 @@ paperButton.addEventListener("click", () => {
 })
 
 //set user button to id user-button-container div
+const div-user-buttons-container = document.getElementById("user-buttons-container");
+const div-text-result-container = document.getElementById("text-result-container");
+const div-record-tracking-container = document.getElementById("record-tracking-container");
+const div-user-record-container = document.getElementById("user-record-container");
+const div-computer-record-container = document.getElementById("computer-record-container");
+const div-user-computer-value-container = document.getElementById("user-computer-value-container");
