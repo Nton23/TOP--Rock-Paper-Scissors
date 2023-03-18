@@ -55,3 +55,17 @@ scissorsButton.setAttribute("class", "bttn");
 paperButton.setAttribute("class", "bttn");
 
 //set id attribute to each button
+rockButton.setAttribute("id", "rockBttn");
+scissorsButton.setAttribute("id", "scissorsBttn");
+paperButton.setAttribute("id", "paperBttn");
+
+//add event listener to button
+rockButton.addEventListener("click", () => {
+    console.log(playRound("Rock", getComputerChoice()));
+})
+scissorsButton.addEventListener("click", () => {
+    console.log(playRound("Scissors", getComputerChoice()));
+})
+paperButton.addEventListener("click", () => {
+    console.log(playRound("Paper", getComputerChoice()));
+})
