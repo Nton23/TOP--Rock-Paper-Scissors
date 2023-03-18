@@ -77,8 +77,15 @@ const recordTrackingContainer = document.getElementById("record-tracking-contain
 const userRecordContainer = document.getElementById("user-record-container");
 const computerRecordContainer = document.getElementById("computer-record-container");
 const userComputerValueContainer = document.getElementById("user-computer-value-container");
+const rockContainer = document.getElementById("rock-container");
+const scissorsContainer = document.getElementById("scissors-container");
+const paperContainer = document.getElementById("paper-container");
 
 //set div class from html to var in js
 const userContainer = document.getElementsByClassName("user-container");
 
 //add buttons to div container
+rockContainer.appendChild(rockButton);
+scissorsContainer.appendChild(scissorsButton);
+paperContainer.appendChild(paperButton);
+
