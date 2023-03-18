@@ -69,3 +69,5 @@ scissorsButton.addEventListener("click", () => {
 paperButton.addEventListener("click", () => {
     console.log(playRound("Paper", getComputerChoice()));
 })
+
+//set user button to id user-button-container div
