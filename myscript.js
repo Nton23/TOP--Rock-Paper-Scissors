@@ -56,26 +56,56 @@ paperButton.setAttribute("id", "paperBttn");
 
 //array to store addeventlistner user button
 const resultsArray = [];
+let result = "";
 //add event listener to button
 rockButton.addEventListener("click", () => {
-    const result = playRound("Rock", getComputerChoice());
+    result = playRound("Rock", getComputerChoice());
     resultsArray.push(result);
-    textResult.textContent = result;
-
+    displayResult();
 });
 
 scissorsButton.addEventListener("click", () => {
     const result = playRound("Scissors", getComputerChoice());
-    textResult.textContent = result;
+    resultsArray.push(result);
+    displayResult();
 });
 paperButton.addEventListener("click", () => {
     const result = playRound("Paper", getComputerChoice());
-    textResult.textContent = result;
+    resultsArray.push(result);
+    displayResult();
 });
 
+//display result function
+function displayResult() {
+    let winCount = 0;
+    let loseCount = 0;
+    for (let i = 0; i < resultsArray.length; i++) {
+        if (resultsArray[i].includes("win")) {
+            winCount += 1;
+            userValue.textContent = winCount;
+            if (winCount === 3) {
+                break;
+            }
+        } else if (resultsArray[i].includes("lose")) {
+            loseCount += 1;
+            computerValue.textContent = loseCount;
+            if (loseCount === 3) {
+                break;
+            }
+        }
+    }
+    if (winCount < 3 && loseCount < 3) {
+        textResult.textContent = result;
+    }
+    else {
+        return;
+    }
+}
+
 //set div from html to var in js
+
 //const userButtonsContainer = document.getElementById("user-buttons-container");
-const textResultContainer= document.getElementById("text-result-container");
+const textResultContainer = document.getElementById("text-result-container");
 const recordTrackingContainer = document.getElementById("record-tracking-container");
 const userRecordContainer = document.getElementById("user-record-container");
 const computerRecordContainer = document.getElementById("computer-record-container");
@@ -89,6 +119,7 @@ const userVsComputer = document.getElementById("user-vs-computer");
 const computerValue = document.getElementById("computer-value");
 const userTitle = document.getElementById("user-title");
 const computerTitle = document.getElementById("computer-title");
+const totalResultAnnouncement = document.getElementById("total-result-announcement");
 
 //set div class from html to var in js
 const userContainer = document.getElementsByClassName("user-container");
@@ -103,4 +134,3 @@ userVsComputer.textContent = "V/S";
 rockContainer.appendChild(rockButton);
 scissorsContainer.appendChild(scissorsButton);
 paperContainer.appendChild(paperButton);
-
