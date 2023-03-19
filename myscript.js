@@ -89,3 +89,7 @@ rockContainer.appendChild(rockButton);
 scissorsContainer.appendChild(scissorsButton);
 paperContainer.appendChild(paperButton);
 
+//add user container div to user-button-container divs
+userButtonsContainer.appendChild(rockContainer);
+userButtonsContainer.appendChild(scissorsContainer);
+userButtonsContainer.appendChild(paperContainer);
