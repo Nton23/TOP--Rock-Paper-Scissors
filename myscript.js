@@ -82,6 +82,9 @@ const rockContainer = document.getElementById("rock-container");
 const scissorsContainer = document.getElementById("scissors-container");
 const paperContainer = document.getElementById("paper-container");
 const textResult = document.getElementById("text-result");
+const userValue = document.getElementById("user-value");
+const userVsComputer = document.getElementById("user-vs-computer");
+const computerValue = document.getElementById("computer-value");
 
 //set div class from html to var in js
 const userContainer = document.getElementsByClassName("user-container");
