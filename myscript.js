@@ -44,11 +44,6 @@ rockButton.textContent = "Rock";
 scissorsButton.textContent = "Scissors";
 paperButton.textContent = "Paper";
 
-//add the button to the html document
-//document.body.appendChild(rockButton);
-//document.body.appendChild(scissorsButton);
-//document.body.appendChild(paperButton);
-
 //set class attribute to each button
 rockButton.setAttribute("class", "users-bttn");
 scissorsButton.setAttribute("class", "users-bttn");
