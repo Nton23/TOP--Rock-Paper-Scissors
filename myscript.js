@@ -54,22 +54,24 @@ rockButton.setAttribute("id", "rockBttn");
 scissorsButton.setAttribute("id", "scissorsBttn");
 paperButton.setAttribute("id", "paperBttn");
 
-//add text-result-container and text-result
-
-
+//array to store addeventlistner user button
+const resultsArray = [];
 //add event listener to button
 rockButton.addEventListener("click", () => {
     const result = playRound("Rock", getComputerChoice());
+    resultsArray.push(result);
     textResult.textContent = result;
-})
+
+});
+
 scissorsButton.addEventListener("click", () => {
     const result = playRound("Scissors", getComputerChoice());
     textResult.textContent = result;
-})
+});
 paperButton.addEventListener("click", () => {
     const result = playRound("Paper", getComputerChoice());
     textResult.textContent = result;
-})
+});
 
 //set div from html to var in js
 //const userButtonsContainer = document.getElementById("user-buttons-container");
@@ -85,9 +87,15 @@ const textResult = document.getElementById("text-result");
 const userValue = document.getElementById("user-value");
 const userVsComputer = document.getElementById("user-vs-computer");
 const computerValue = document.getElementById("computer-value");
+const userTitle = document.getElementById("user-title");
+const computerTitle = document.getElementById("computer-title");
 
 //set div class from html to var in js
 const userContainer = document.getElementsByClassName("user-container");
+
+//Display the Player and Computer text in usertitle/computertile box
+userTitle.textContent = "PLAYER";
+computerTitle.textContent = "COMPUTER";
 
 //add buttons to div container
 rockContainer.appendChild(rockButton);
