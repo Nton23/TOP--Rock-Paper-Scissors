@@ -76,11 +76,18 @@ body {
     border: red dashed;
 }
 
+#total-result-container {
+    border: blue solid;
+    width: 90%;
+    height: 15%;
+    display: flex;
+}
 #total-result-announcement {
     border: red dashed;
-    width: 90%;
-    height: 12%;
+    width: 100%;
+    height: 100%;
 }
+
 .title-container {
     border: red dashed;
     border-bottom: none;
