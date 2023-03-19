@@ -54,9 +54,13 @@ rockButton.setAttribute("id", "rockBttn");
 scissorsButton.setAttribute("id", "scissorsBttn");
 paperButton.setAttribute("id", "paperBttn");
 
+//add text-result-container and text-result
+
+
 //add event listener to button
 rockButton.addEventListener("click", () => {
-    console.log(playRound("Rock", getComputerChoice()));
+    const result = playRound("Rock", getComputerChoice());
+    textResult.textContent = result;
 })
 scissorsButton.addEventListener("click", () => {
     console.log(playRound("Scissors", getComputerChoice()));
@@ -66,15 +70,16 @@ paperButton.addEventListener("click", () => {
 })
 
 //set div from html to var in js
-const userButtonsContainer = document.getElementById("user-buttons-container");
+//const userButtonsContainer = document.getElementById("user-buttons-container");
 const textResultContainer= document.getElementById("text-result-container");
 const recordTrackingContainer = document.getElementById("record-tracking-container");
 const userRecordContainer = document.getElementById("user-record-container");
 const computerRecordContainer = document.getElementById("computer-record-container");
-const userComputerValueContainer = document.getElementById("user-computer-value-container");
+//const userComputerValueContainer = document.getElementById("user-computer-value-container");
 const rockContainer = document.getElementById("rock-container");
 const scissorsContainer = document.getElementById("scissors-container");
 const paperContainer = document.getElementById("paper-container");
+const textResult = document.getElementById("text-result");
 
 //set div class from html to var in js
 const userContainer = document.getElementsByClassName("user-container");
