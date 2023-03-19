@@ -97,6 +97,8 @@ const userContainer = document.getElementsByClassName("user-container");
 userTitle.textContent = "PLAYER";
 computerTitle.textContent = "COMPUTER";
 
+//Display the VS in the user-vs-computer box
+userVsComputer.textContent = "V/S";
 //add buttons to div container
 rockContainer.appendChild(rockButton);
 scissorsContainer.appendChild(scissorsButton);
