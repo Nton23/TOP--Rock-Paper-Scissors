@@ -18,11 +18,12 @@ body {
     background-color: var(--background-color);
     border: black dashed;
     display: flex;
+    justify-content: space-around;
 }
 
 #user-buttons-container {
     border: blue solid;
-    width: 20%;
+    width: 30%;
     height: 30%;
     display: flex;
     flex-direction: column;
@@ -55,4 +56,12 @@ body {
     border: black dotted;
     width: 100%;
     height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+#record-tracking-container {
+    border: blue solid;
+    width: 30%;
+}
+
