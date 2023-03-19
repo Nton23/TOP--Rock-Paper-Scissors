@@ -63,10 +63,12 @@ rockButton.addEventListener("click", () => {
     textResult.textContent = result;
 })
 scissorsButton.addEventListener("click", () => {
-    console.log(playRound("Scissors", getComputerChoice()));
+    const result = playRound("Scissors", getComputerChoice());
+    textResult.textContent = result;
 })
 paperButton.addEventListener("click", () => {
-    console.log(playRound("Paper", getComputerChoice()));
+    const result = playRound("Paper", getComputerChoice());
+    textResult.textContent = result;
 })
 
 //set div from html to var in js
