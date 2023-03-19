@@ -62,6 +62,7 @@ body {
 }
 #record-tracking-container {
     border: blue solid;
+    height: 100%;
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -70,24 +71,27 @@ body {
 }
 
 #user-vs-computer{
-    width: 140px;
-    height: 150px;
+    width: 55%;
+    height: 10%;
     border: red dashed;
 }
 
 #total-result-announcement {
     border: red dashed;
-    width: 400px;
-    height: 100px;
+    width: 90%;
+    height: 12%;
 }
 .title-container {
     border: red dashed;
     border-bottom: none;
-    height: 50px;
+    height: 25%;
+}
+.record-container {
+    width: 35%;
 }
 .value-container {
     border: red dashed;
-    width: 140px;
+    width: 100%;
     height: 150px;
 }
 .title-container {
@@ -97,4 +101,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#user-vs-computer {
+    color: wheat;
+    font-weight: bolder;
+    font-size: 5.4em;
+    overflow-wrap: break-word;
+    display:flex;
+    justify-content: center;
 }
