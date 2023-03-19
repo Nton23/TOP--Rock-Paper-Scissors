@@ -69,14 +69,24 @@ body {
     align-items: center;
 }
 
-.record-container {
-    border: blue solid;
+#user-vs-computer{
     width: 140px;
-    height: 200px;
+    height: 150px;
+    border: red dashed;
 }
 
 #total-result-announcement {
-    border: blue solid;
+    border: red dashed;
     width: 400px;
     height: 100px;
+}
+.title-container {
+    border: red dashed;
+    border-bottom: none;
+    height: 50px;
+}
+.value-container {
+    border: red dashed;
+    width: 140px;
+    height: 150px;
 }
