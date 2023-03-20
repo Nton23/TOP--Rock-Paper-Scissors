@@ -91,7 +91,7 @@ function displayResult() {
                 textResult.textContent = result;
             }
         } else {
-            return textResult.style.display = "none";
+            return textResult.textContent = "";
         }
     }
     if (winCount == 3) {
@@ -100,8 +100,6 @@ function displayResult() {
         totalResultAnnouncement.textContent = `You Lose!`
     }
 }
-
-//set div from html to var in js
 
 //const userButtonsContainer = document.getElementById("user-buttons-container");
 const textResultContainer = document.getElementById("text-result-container");
@@ -119,6 +117,7 @@ const computerValue = document.getElementById("computer-value");
 const userTitle = document.getElementById("user-title");
 const computerTitle = document.getElementById("computer-title");
 const totalResultAnnouncement = document.getElementById("total-result-announcement");
+const resetButton = document.getElementById("reset-button");
 
 //set div class from html to var in js
 const userContainer = document.getElementsByClassName("user-container");
@@ -133,3 +132,14 @@ userVsComputer.textContent = "V/S";
 rockContainer.appendChild(rockButton);
 scissorsContainer.appendChild(scissorsButton);
 paperContainer.appendChild(paperButton);
+
+//reset button function
+resetButton.addEventListener("click", () => {
+    winCount= 0;
+    loseCount = 0;
+    userValue.textContent = winCount;
+    computerValue.textContent = loseCount;
+    textResult.textContent = "";
+    totalResultAnnouncement.textContent = "";
+    resultsArray.splice(0, resultsArray.length);
+})
