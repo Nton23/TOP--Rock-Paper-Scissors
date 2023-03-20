@@ -65,12 +65,12 @@ rockButton.addEventListener("click", () => {
 });
 
 scissorsButton.addEventListener("click", () => {
-    const result = playRound("Scissors", getComputerChoice());
+    result = playRound("Scissors", getComputerChoice());
     resultsArray.push(result);
     displayResult();
 });
 paperButton.addEventListener("click", () => {
-    const result = playRound("Paper", getComputerChoice());
+    result = playRound("Paper", getComputerChoice());
     resultsArray.push(result);
     displayResult();
 });
@@ -80,25 +80,24 @@ function displayResult() {
     let winCount = 0;
     let loseCount = 0;
     for (let i = 0; i < resultsArray.length; i++) {
-        if (resultsArray[i].includes("win")) {
-            winCount += 1;
-            userValue.textContent = winCount;
-            if (winCount === 3) {
-                break;
+        if (winCount != 3 && loseCount != 3) {
+            if (resultsArray[i].includes("win")) {
+                winCount += 1;
+                userValue.textContent = winCount;
+                textResult.textContent = result;
+            } else if (resultsArray[i].includes("lose")) {
+                loseCount += 1;
+                computerValue.textContent = loseCount;
+                textResult.textContent = result;
             }
-        } else if (resultsArray[i].includes("lose")) {
-            loseCount += 1;
-            computerValue.textContent = loseCount;
-            if (loseCount === 3) {
-                break;
-            }
+        } else {
+            return textResult.style.display = "none";
         }
     }
-    if (winCount < 3 && loseCount < 3) {
-        textResult.textContent = result;
-    }
-    else {
-        return;
+    if (winCount == 3) {
+        totalResultAnnouncement.textContent = `You Win!`;
+    } else if (loseCount == 3) {
+        totalResultAnnouncement.textContent = `You Lose!`
     }
 }
 
