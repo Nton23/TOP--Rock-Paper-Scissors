@@ -126,3 +126,12 @@ body {
     color: wheat;
     font-size: 10rem;
 }
+#reset-button {
+    background-color: transparent;
+    border: red dashed;
+    width: 100px;
+    height: 30px;
+}
+#reset-button:hover {
+    background: var(--background-button-color);
+}
