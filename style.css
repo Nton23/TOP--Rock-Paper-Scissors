@@ -22,11 +22,11 @@ body {
 
 #user-buttons-container {
     width: 30%;
-    height: 30%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     align-self: center;
 }
 
@@ -34,8 +34,8 @@ body {
     background-color: transparent;
     border: var(--border-color) dotted;
     border-radius: 100%;
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     color: var(--font-color);
 }
 
