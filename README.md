@@ -1,4 +1,6 @@
 # TOP--Rock-Paper-Scissors
+06-27-23 - Add tailwindcss to this APP
+--------------------------------------
 This is a TOP project Rock/Paper/Scissors
 Assignment:
 -Don’t forget to commit early & often! You can reference the Commit Message lesson here!
@@ -27,3 +29,4 @@ At this point you should be using console.log() to display the results of each r
 Use prompt() to get input from the user. Read the docs here if you need to.
 Feel free to re-work your previous functions if you need to. Specifically, you might want to change the return value to something more useful.
 Feel free to create more “helper” functions if you think it would be useful.
+---------------------------------
